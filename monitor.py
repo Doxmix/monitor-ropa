@@ -107,7 +107,7 @@ def check_restock():
             logger.info(f"[{idx+1}/{len(PRODUCTS_TO_MONITOR)}] Revisando {url} | Talla: {target_size}")
             
             page = context.new_page()
-            Stealth().apply_stealth_sync(page)
+            stealth_sync(page)
             
             try:
                 response = page.goto(url, wait_until="domcontentloaded", timeout=45000)
