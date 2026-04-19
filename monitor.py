@@ -6,7 +6,7 @@ import json
 import re
 from datetime import datetime, timezone
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-from playwright_stealth import Stealth
+from playwright_stealth import stealth_sync
 from dotenv import load_dotenv
 
 # Cargar variables de entorno desde el archivo .env si existe
